@@ -2,6 +2,7 @@ package BaseTest;
 
 import java.io.FileInputStream;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -27,6 +28,9 @@ public class BaseClass {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 	}
 
 	/*
