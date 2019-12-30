@@ -3,7 +3,6 @@ package Stepdefination;
 import org.openqa.selenium.By;
 
 import BaseTest.BaseClass;
-import Pagelocators.loginPageLocators;
 import TestUtil.UtilsClass;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
