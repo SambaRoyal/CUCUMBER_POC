@@ -60,8 +60,6 @@
 			<version>2.12.2</version>
 		</dependency>
 
-
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>

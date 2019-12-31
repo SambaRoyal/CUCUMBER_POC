@@ -16,12 +16,12 @@ public class BaseClass {
 	@Test
 	public void properties() throws Throwable {
 		prop = new Properties();
-		String directory = System.getProperty("user.dir");
-		System.out.println(directory);
 			FileInputStream fileinputtream = new FileInputStream(
 					System.getProperty("user.dir") + "\\src\\main\\java\\proper.properties");
 			prop.load(fileinputtream);
-	}
+		
+	}		
+	
 
 	@Test
 	public void browser(String url) {

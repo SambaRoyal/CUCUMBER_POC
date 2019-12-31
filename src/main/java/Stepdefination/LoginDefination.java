@@ -12,7 +12,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class Defination extends BaseClass {
+public class LoginDefination extends BaseClass {
 	UtilsClass util;
 
 	@Given("^user already in login page$")
@@ -39,7 +39,7 @@ public class Defination extends BaseClass {
 		util.clickElement(By.xpath("//*[@id='login']"), driver);
 		String title = driver.getTitle();
 		if (title.contains("LetMeCall")) {
-			assertEquals(String_class.title, title);
+			assertEquals(String_class.login_title, title);
 		} else {
 			System.out.println("in-correct title    :" + title);
 		}
