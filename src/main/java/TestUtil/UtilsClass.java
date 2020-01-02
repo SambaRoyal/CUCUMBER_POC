@@ -3,6 +3,7 @@ package TestUtil;
 import static org.junit.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -42,10 +43,21 @@ public class UtilsClass {
 	public void textValidations(By element , WebDriver driver,String value) {
 		new WebDriverWait(driver, 50, 500).until(ExpectedConditions.visibilityOfElementLocated(element));
 		  String text=driver.findElement(element).getText();
-		  System.out.println(text);
+		  System.out.println("Validation String text  :"+text);
 		  assertEquals(text,value);
 	}
-	
+	public void imageValidation(By element, WebDriver driver) {
+		WebElement image=driver.findElement(element);
+		Boolean ImagePresent = (Boolean) ((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", image);
+	        if (ImagePresent)
+	        {
+	             System.out.println("Expected Image is displayed.");
+	        }
+	        else
+	        {
+	            System.out.println("Image unable to displayed.");
+	        }
+	}
 	
 	
 	
