@@ -1,6 +1,8 @@
 package BaseTest;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -13,8 +15,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static Properties prop;
 
-	@Test
-	public void properties() throws Throwable {
+	public  BaseClass() throws IOException{
 		prop = new Properties();
 			FileInputStream fileinputtream = new FileInputStream(
 					System.getProperty("user.dir") + "\\src\\main\\java\\proper.properties");

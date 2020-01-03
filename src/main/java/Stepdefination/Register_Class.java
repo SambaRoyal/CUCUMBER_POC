@@ -2,6 +2,8 @@ package Stepdefination;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 
 import BaseTest.BaseClass;
@@ -13,11 +15,14 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Register_Class extends BaseClass {
+	public Register_Class() throws IOException {
+		super();
+	}
+
 	UtilsClass util;
 
 	@Given("^user is ready to enter the details$")
 	public void user_is_ready_to_enter_the_details() throws Throwable {
-		properties();
 		browser(prop.getProperty("url"));
 		util = new UtilsClass();
 		util.clickElement(By.xpath("//button[@id='main-popupclose']"), driver);

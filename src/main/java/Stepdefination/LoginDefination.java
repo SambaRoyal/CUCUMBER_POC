@@ -2,6 +2,8 @@ package Stepdefination;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 
 import BaseTest.BaseClass;
@@ -14,10 +16,11 @@ import cucumber.api.java.en.When;
 
 public class LoginDefination extends BaseClass {
 	UtilsClass util;
-
+public LoginDefination() throws IOException {
+	super();
+}
 	@Given("^user already in login page$")
 	public void user_already_in_login_page() throws Throwable {
-		properties();
 		browser(prop.getProperty("url"));
 	}
 
