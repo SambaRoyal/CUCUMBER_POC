@@ -7,8 +7,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "C:\\Users\\dev01\\eclipse-workspace\\Poc\\src\\main\\java\\FeatureFile\\feat.feature", glue = {
-		"Stepdefination" },tags= {"@Test1"})
+		"stepdefination"})
 //tags= {"@Test3"}
+//,tags= {"@Test1"}
 public class RunnerClass {
 
 }

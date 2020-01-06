@@ -14,18 +14,19 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			<plugin>
+<!-- 			<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>2.19.1</version>
-        <configuration>
+         <configuration>
+        <testFailureIgnore>true</testFailureIgnore>
             <suiteXmlFiles>
-                <suiteXmlFile>C:\Users\dev01\eclipse-workspace\Poc\testng.xml</suiteXmlFile>
+                <suiteXmlFile>${C:\Users\dev01\eclipse-workspace\Poc\src\test\java\Runner\RunnerClass.java}</suiteXmlFile>
             </suiteXmlFiles>
         </configuration>
-</plugin>
-		</plugins>
-	</build>
+</plugin>-->
+		</plugins> 
+	</build> 
 	<groupId>Cucumber</groupId>
 	<artifactId>Poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -34,10 +35,10 @@
 	<name>Poc</name>
 	<url>http://maven.apache.org</url>
 
-	<properties>
+	 <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
+	</properties> 
 
 	<dependencies>
 		<dependency>
@@ -47,19 +48,26 @@
 		</dependency>
 
 
-		<!-- <dependency>
+		 <dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>1.2.5</version>
 			<type>pom</type>
-		</dependency> -->
+		</dependency> 
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-		<dependency>
+		<!--   <dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>2.0.0</version>
-		</dependency>
+		</dependency>   -->
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.0.0</version>
+    <scope>test</scope>
+</dependency>
 
 
 		<dependency>
