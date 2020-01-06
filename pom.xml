@@ -12,14 +12,18 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-				
-					 <suiteXmlFiles>
-					<!-- 	<suiteXmlFile>src/main/resources/testSuite/regression.xml</suiteXmlFile> -->
-						<suiteXmlFile>${testng.xml}</suiteXmlFile>
-					</suiteXmlFiles>
-					
 				</configuration>
 			</plugin>
+			<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.19.1</version>
+        <configuration>
+            <suiteXmlFiles>
+                <suiteXmlFile>C:\Users\dev01\eclipse-workspace\Poc\testng.xml</suiteXmlFile>
+            </suiteXmlFiles>
+        </configuration>
+</plugin>
 		</plugins>
 	</build>
 	<groupId>Cucumber</groupId>
