@@ -12,6 +12,12 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				
+					 <suiteXmlFiles>
+						<suiteXmlFile>src/main/resources/testSuite/regression.xml</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					
 				</configuration>
 			</plugin>
 		</plugins>
