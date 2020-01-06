@@ -1,4 +1,4 @@
-package Stepdefination;
+package stepdefination;
 
 import static org.junit.Assert.assertTrue;
 
@@ -9,12 +9,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import BaseTest.BaseClass;
-import Pagelocators.String_class;
-import TestUtil.UtilsClass;
+import baseTest.BaseClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pagelocators.StringUtil;
+import testUtil.Utils;
 
 public class LoginPage_Validations extends BaseClass {
 	
@@ -23,10 +23,10 @@ public class LoginPage_Validations extends BaseClass {
 		super();
 	}
 
-	UtilsClass util;
+	Utils util;
 	@Given("^verify main header$")
 	public void verify_main_header() throws Throwable {
-		 util = new UtilsClass();
+		 util = new Utils();
 		browser(prop.getProperty("url"));
 		util.clickElement(By.xpath("//button[@id='main-popupclose']"), driver);
 		util.clickElement(By.xpath("//a[@id='login-btn']"), driver);
@@ -38,16 +38,16 @@ public class LoginPage_Validations extends BaseClass {
 
 		util.clickElement(By.xpath("//button[@id='main-popupclose']"), driver);
 
-		util.textValidations(By.xpath("//*[@id='content']/div[2]/span"), driver, String_class.Offer_text);
+		util.textValidations(By.xpath("//*[@id='content']/div[2]/span"), driver, StringUtil.Offer_text);
 
 		driver.findElement(By.xpath("//div[@class='features-icons-item']")).isDisplayed();
 		util.textValidations(By.xpath("//*[@id='content']/section[2]/div/div[2]/div[1]/p[1]"), driver,
-				String_class.Team_Up_with_LetMeCall);
+				StringUtil.Team_Up_with_LetMeCall);
 		util.textValidations(By.xpath("//*[@id='content']/section[2]/div/div[2]/div[2]/p[1]"), driver,
-				String_class.Deliver_with_LetMeCall);
-		util.textValidations(By.xpath("//*[@id='wrapper']/footer/div/div/div[1]/p[1]"), driver, String_class.About_us);
+				StringUtil.Deliver_with_LetMeCall);
+		util.textValidations(By.xpath("//*[@id='wrapper']/footer/div/div/div[1]/p[1]"), driver, StringUtil.About_us);
 		util.textValidations(By.xpath("//*[@id='wrapper']/footer/div/div/div[2]/div/p[1]"), driver,
-				String_class.Contact_us);
+				StringUtil.Contact_us);
 
 	}
 

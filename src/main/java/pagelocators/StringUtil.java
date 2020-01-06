@@ -1,9 +1,6 @@
-package Pagelocators;
+package pagelocators;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
-public class String_class {
+public class StringUtil {
 
 	
 	public final static  String login_title="LetMeCall - Online food delivery from your favorite restaurant.";

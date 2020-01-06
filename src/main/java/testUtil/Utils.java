@@ -1,4 +1,4 @@
-package TestUtil;
+package testUtil;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class UtilsClass {
+public class Utils {
 
 	public void clickElement(By element, WebDriver driver) {
 		new WebDriverWait(driver, 60, 500).until(ExpectedConditions.presenceOfElementLocated(element));

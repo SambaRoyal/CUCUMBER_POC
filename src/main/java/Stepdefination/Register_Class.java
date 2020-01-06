@@ -1,4 +1,4 @@
-package Stepdefination;
+package stepdefination;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,25 +6,25 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 
-import BaseTest.BaseClass;
-import Pagelocators.String_class;
-import TestUtil.UtilsClass;
+import baseTest.BaseClass;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pagelocators.StringUtil;
+import testUtil.Utils;
 
 public class Register_Class extends BaseClass {
 	public Register_Class() throws IOException {
 		super();
 	}
 
-	UtilsClass util;
+	Utils util;
 
 	@Given("^user is ready to enter the details$")
 	public void user_is_ready_to_enter_the_details() throws Throwable {
 		browser(prop.getProperty("url"));
-		util = new UtilsClass();
+		util = new Utils();
 		util.clickElement(By.xpath("//button[@id='main-popupclose']"), driver);
 		util.clickElement(By.xpath("//*[@id='signup-btn']"), driver);
 		String ti = driver.getTitle();
@@ -52,7 +52,7 @@ public class Register_Class extends BaseClass {
 		util.verifyingToolTip(By.xpath("//*[@id='emailAddress']"), driver);
 		String ele = driver.findElement(By.xpath("//*[@class='tooltip fade top in']")).getText();
 		System.out.println("TOOLTIP STRING VALUE   :" + ele);
-		if (ele.equals(String_class.tooltip_value)) {
+		if (ele.equals(StringUtil.tooltip_value)) {
 			util.clickElement(By.xpath("//a[@id='login-btn']"), driver);
 			util.inputText(By.xpath("//*[@id='j_username']"), prop.getProperty("username"), driver);
 			util.inputText(By.xpath("//*[@id='j_password']"), prop.getProperty("password"), driver);
