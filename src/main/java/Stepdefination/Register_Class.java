@@ -1,4 +1,4 @@
-package stepdefination;
+package Stepdefination;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 
-import baseTest.BaseClass;
+import BaseTest.BaseClass;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

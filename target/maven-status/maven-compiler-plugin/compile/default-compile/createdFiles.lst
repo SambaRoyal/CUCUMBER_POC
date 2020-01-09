@@ -1,6 +1,0 @@
-stepdefination\LoginDefination.class
-stepdefination\LoginPage_Validations.class
-baseTest\BaseClass.class
-stepdefination\Register_Class.class
-pagelocators\StringUtil.class
-testUtil\Utils.class

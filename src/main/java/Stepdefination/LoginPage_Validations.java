@@ -1,15 +1,10 @@
-package stepdefination;
-
-import static org.junit.Assert.assertTrue;
+package Stepdefination;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 
-import baseTest.BaseClass;
+import BaseTest.BaseClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -17,23 +12,23 @@ import pagelocators.StringUtil;
 import testUtil.Utils;
 
 public class LoginPage_Validations extends BaseClass {
-	
-	
+
 	public LoginPage_Validations() throws IOException {
 		super();
 	}
 
 	Utils util;
+
 	@Given("^verify main header$")
 	public void verify_main_header() throws Throwable {
-		 util = new Utils();
+		util = new Utils();
 		browser(prop.getProperty("url"));
 		util.clickElement(By.xpath("//button[@id='main-popupclose']"), driver);
 		util.clickElement(By.xpath("//a[@id='login-btn']"), driver);
 		util.inputText(By.xpath("//*[@id='j_username']"), prop.getProperty("username"), driver);
 		util.inputText(By.xpath("//*[@id='j_password']"), prop.getProperty("password"), driver);
 		util.clickElement(By.xpath("//*[@id='login']"), driver);
-		
+
 		util.clickElement(By.xpath("/html/body/section/div/div[1]/div/div[8]/div/div/div/div/div/a"), driver);
 
 		util.clickElement(By.xpath("//button[@id='main-popupclose']"), driver);
@@ -55,6 +50,7 @@ public class LoginPage_Validations extends BaseClass {
 	public void verify_application_image() {
 		util.imageValidation(By.xpath("//img[@class='img-fluid mb-3'][1]"), driver);
 	}
+
 	@Then("^verify source image and address$")
 	public void verify_source_image_and_address() {
 	}

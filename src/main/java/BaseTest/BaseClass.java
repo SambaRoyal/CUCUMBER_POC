@@ -1,4 +1,4 @@
-package baseTest;
+package BaseTest;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,6 +15,8 @@ public class BaseClass {
 	public static Properties prop;
 
 	public  BaseClass() throws IOException{
+		String directory=System.getProperty("user.dir");
+		System.out.println(directory);
 		prop = new Properties();
 			FileInputStream fileinputtream = new FileInputStream(
 					System.getProperty("user.dir") + "\\src\\main\\java\\proper.properties");
@@ -32,6 +34,7 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 	}
+
 
 	/*
 	 * @Parameters("browser") public void browser_initialization(String browser) {
