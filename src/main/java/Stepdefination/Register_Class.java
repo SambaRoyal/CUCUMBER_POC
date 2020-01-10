@@ -23,7 +23,8 @@ public class Register_Class extends BaseClass {
 
 	@Given("^user is ready to enter the details$")
 	public void user_is_ready_to_enter_the_details() throws Throwable {
-		browser(prop.getProperty("url"));
+		//browser(prop.getProperty("url"));
+		browser_initialization("Chrome", prop.getProperty("url"));
 		util = new Utils();
 		util.clickElement(By.xpath("//button[@id='main-popupclose']"), driver);
 		util.clickElement(By.xpath("//*[@id='signup-btn']"), driver);
@@ -61,8 +62,8 @@ public class Register_Class extends BaseClass {
 		}
 	}
 
-	@After
+/*	@After
 	public void teardown() {
 		driver.close();
-	}
+	}*/
 }
